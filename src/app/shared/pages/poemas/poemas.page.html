@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Electrodomesticos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-list>
+        <ion-list-header>
+            <ion-button (click)="loginGoogle()">Login</ion-button>
+        </ion-list-header>
+        <ion-item *ngFor='let poema of poemas |async; trackBy: trackByFn'>
+            <ion-avatar slot="start">
+                <img [src]="poema.image.url">
+            </ion-avatar>
+            <ion-label>
+                <ion-label className="ion-text-wrap">{{poema.poema}}</ion-label>
+                <h3>{{poema.usuario.displayName}}</h3>
+                <p>{{poema.comentarios}}</p>
+            </ion-label>
+        </ion-item>
+
+    </ion-list>
+
+</ion-content>
