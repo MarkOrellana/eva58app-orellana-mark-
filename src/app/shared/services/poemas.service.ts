@@ -13,12 +13,12 @@ export class PoemasService {
   constructor(private afs: AngularFirestore) { }
 
   getPoemas(): Observable<any[]> {
-    return this.afs.collection('poemas',
+    return this.afs.collection('electrodomesticos',
     ref => ref.orderBy('fecha', 'asc')).valueChanges();
   }
 
   insertPoema(poema: Poema) {
-    const refPoema = this.afs.collection('poemas')
+    const refPoema = this.afs.collection('electrodomesticos')
     poema.uid = this.afs.createId()
     const param = JSON.parse(JSON.stringify(poema));
     refPoema.doc(poema.uid).set(param, {merge: true})
