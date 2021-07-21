@@ -1,6 +1,6 @@
 export class Poema {
     uid: string;
-    poema: string;
+    DescripcionElectro: string;
     fecha: string;
     image: {};
     usuario: {};

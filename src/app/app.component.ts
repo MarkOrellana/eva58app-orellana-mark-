@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
       icon: 'mail'
     },
     {
-      title: 'Subir poema',
+      title: 'Subir Electrodomestico',
       url: 'subir-poema',
       icon: 'paper-plane'
     },
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       icon: 'heart'
     },
     {
-      title: 'Archived',
+      title: 'Listar Electrodomesticos',
       url: '/folder/Archived',
       icon: 'archive'
     },
